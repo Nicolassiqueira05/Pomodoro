@@ -2,9 +2,9 @@
 
 ## some tips
 
-Put the components in they correspondent folders.
-Create an story for all your components.
-Create tests for all you components.
+Put the components in they correspondent folders.\
+Create an story for all your components.\
+Create tests for all you components.\
 
 # available scripts
 
