@@ -2,8 +2,8 @@ import React from 'react'
 import Title from './Title'
 
 export default {
-    title: "Title",
+    title: "Atoms/Title",
     component: Title
 }
 
-export const standard = () => <Title>teste</Title>
+export const standard = () => <Title>Title</Title>

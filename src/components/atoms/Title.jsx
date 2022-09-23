@@ -1,4 +1,4 @@
-const Title = (props) =>{
-    return <h1>{props.children}</h1>
+const Title = ({children, title}) =>{
+    return <h1 className={title}>{children}</h1>
 }
 export default Title

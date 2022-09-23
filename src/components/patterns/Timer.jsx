@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Number from '../atoms/Number'
 
-const Timer = () =>{
-    return(
-        <></>
-    )
+const Timer = (props) =>{
+    return <Number>{props.children}</Number>
 }
+export default Timer

@@ -1,10 +1,13 @@
 import React from 'react'
 import Title from '../atoms/Title'
+import Counter from './Counter'
 
 const Main = () => {
     return(
-        <Title>Pomodoro Timer</Title>
-        
+        <div>
+            <Title>Pomodoro Timer</Title>
+            <Counter/>
+        </div>
     )
 }
 
