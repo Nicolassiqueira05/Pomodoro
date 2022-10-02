@@ -1,0 +1,19 @@
+#mainscreen{
+    width: 100vw;
+    height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#maincontent{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#timer{
+    display: flex;
+}

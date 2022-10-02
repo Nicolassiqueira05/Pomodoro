@@ -5,27 +5,34 @@ import Button from '../atoms/Button'
 const Counter = (props) =>{
     const [isActive, setIsActive] = useState(false);
     const [isPaused, setIsPaused] = useState(true);
-    const [time, setTime] = useState(0);
+    const [minutes, setMinutes] = useState(25);
+    const [seconds, setSeconds] = useState(10);
+
+    if(seconds == -1){
+        setSeconds(59)
+        setMinutes(minutes - 1)
+    }
 
     useEffect(() =>{
         if (isActive) {
-            setInterval(() => {setTime((time) => time + 1)}, 1000)
-            
+            setInterval(() => {setSeconds((seconds) => seconds - 1)}, 1000)
         }
-        
-        
     },[isActive, isPaused])
-        
-    const start = () =>{
-        setIsActive(true)
+    if(seconds < 10){//necessary to render the left 0
+        return(
+            <div>
+                <Timer minutes={minutes} seconds={"0" + seconds}/>
+                <Button function={() => setIsActive(true)}>start</Button>
+            </div>
+        )
     }
-
-    return(
-    <div>
-        <Timer>{time}</Timer>
-        <Button function={start}>start</Button>
-    </div>
-        
-    )
+    else{//standard render
+        return(
+            <div>
+                <Timer minutes={minutes} seconds={seconds}/>
+                <Button function={() => setIsActive(true)}>start</Button>
+            </div>
+        )
+    }    
 }
 export default Counter

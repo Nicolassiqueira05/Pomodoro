@@ -4,7 +4,7 @@ import Counter from './Counter'
 
 const Main = () => {
     return(
-        <div>
+        <div id='maincontent'>
             <Title>Pomodoro Timer</Title>
             <Counter/>
         </div>

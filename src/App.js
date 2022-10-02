@@ -1,9 +1,9 @@
 import React from "react"
-import Main from './components/patterns/Main'
+import Mainscreen from './components/screens/Mainscreen'
 
 function App() {
   return (
-    <Main />
+    <Mainscreen />
   )
 }
 export default App
