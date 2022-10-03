@@ -6,8 +6,8 @@ const Counter = (props) =>{
     const [isActive, setIsActive] = useState(false);
     const [isPaused, setIsPaused] = useState(true);
     const [isWorking, setIsWorking] = useState(false)
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(10);
+    const [minutes, setMinutes] = useState(25);
+    const [seconds, setSeconds] = useState(0);
 
     if(seconds == -1){
         setSeconds(59)
@@ -36,7 +36,7 @@ const Counter = (props) =>{
     
     if(seconds < 10){//render the left 0
         return(
-            <div>
+            <div className='countercontent'>
                 <Timer minutes={minutes} seconds={"0" + seconds}/>
                 <Button function={() => {setIsActive(true); setIsWorking(true)}}>start</Button>
             </div>
@@ -44,7 +44,7 @@ const Counter = (props) =>{
     }
     else{//standard render
         return(
-            <div>
+            <div className='countercontent'>
                 <Timer minutes={minutes} seconds={seconds}/>
                 <Button function={() => {setIsActive(true); setIsWorking(true)}}>start</Button>
             </div>
