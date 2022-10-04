@@ -9,8 +9,8 @@ const Counter = (props) =>{
     const [isPaused, setIsPaused] = useState(true);
     const [isWorking, setIsWorking] = useState(false);
     const [hasLeftzero, setHasLeftzero] = useState(null)
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(2);
+    const [minutes, setMinutes] = useState(25);
+    const [seconds, setSeconds] = useState(0);
 
     const [play] = useSound(bells)
 
@@ -37,7 +37,7 @@ const Counter = (props) =>{
     }
 
     useEffect(() =>{
-        if (isActive) {
+        if (isActive && !isPaused) {
             setInterval(() => {setSeconds((seconds) => seconds - 1)}, 1000)
         }
     },[isActive, isPaused])
@@ -45,7 +45,7 @@ const Counter = (props) =>{
         return(
             <div className='countercontent'>
                 <Timer minutes={minutes} seconds={seconds < 10 ? "0" + seconds : seconds}/>
-                <Button function={() => {setIsActive(true); setIsWorking(true)}}>start</Button>
+                <Button function={() => {setIsActive(true); setIsPaused(false); setIsWorking(true)}}>start</Button>
             </div>
         )
     }    
