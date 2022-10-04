@@ -8,7 +8,6 @@ const Counter = (props) =>{
     const [isActive, setIsActive] = useState(false);
     const [isPaused, setIsPaused] = useState(true);
     const [isWorking, setIsWorking] = useState(false);
-    const [hasLeftzero, setHasLeftzero] = useState(null)
     const [minutes, setMinutes] = useState(25);
     const [seconds, setSeconds] = useState(0);
 
