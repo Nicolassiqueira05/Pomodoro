@@ -12,17 +12,17 @@ const Counter = (props) =>{
     const [seconds, setSeconds] = useState(0);
 
     const [play] = useSound(bells)
-
-    if(seconds === -1){
-        setSeconds(59)
-        setMinutes(minutes - 1)
-    }
-
+    
     function setTime(minutes, seconds, isWorking){
         setMinutes(minutes)
         setSeconds(seconds)
         setIsWorking(isWorking)
         play()
+    }
+
+    if(seconds === -1){
+        setSeconds(59)
+        setMinutes(minutes - 1)
     }
 
     if(minutes === 0 && seconds === 0){
@@ -32,6 +32,9 @@ const Counter = (props) =>{
                 break
             case false:
                 setTime(25, 0, false)
+                break
+            default:
+                //
         }
     }
 
@@ -45,6 +48,7 @@ const Counter = (props) =>{
             <div className='countercontent'>
                 <Timer minutes={minutes} seconds={seconds < 10 ? "0" + seconds : seconds}/>
                 <Button function={() => {setIsActive(true); setIsPaused(false); setIsWorking(true)}}>start</Button>
+                <Button function={() => {setIsActive(true); setIsPaused(false)}}>stop</Button> 
             </div>
         )
     }    
