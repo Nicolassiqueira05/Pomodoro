@@ -2,6 +2,7 @@
   "name": "pomodoro-timer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nicolassiqueira05.github.io",
   "dependencies": {
     "@storybook/addon-controls": "^6.5.12",
     "@storybook/addon-knobs": "^6.4.0",
