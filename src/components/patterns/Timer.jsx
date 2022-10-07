@@ -6,7 +6,7 @@ const Timer = (props) => {
         <div id='timer'>
             <Number>{props.minutes}</Number>
             <p>:</p>
-            <Number>{props.seconds}</Number>
+            <Number>{props.seconds < 10 ? "0" + props.seconds : props.seconds}</Number>
         </div>
     )
 }
