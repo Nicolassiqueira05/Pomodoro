@@ -4,7 +4,7 @@ import Number from '../atoms/Number'
 const Timer = (props) => {
     return(
         <div id='timer'>
-            <Number>{props.minutes}</Number>
+            <Number>{props.minutes < 10 ? "0" + props.minutes : props.minutes}</Number>
             <p>:</p>
             <Number>{props.seconds < 10 ? "0" + props.seconds : props.seconds}</Number>
         </div>

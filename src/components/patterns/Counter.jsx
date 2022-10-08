@@ -30,7 +30,7 @@ const Counter = (props) =>{
                 setTime(5, 0, false)
                 break
             case false:
-                setTime(25, 0, false)
+                setTime(25, 0, true)
                 break
             default:
                 //
